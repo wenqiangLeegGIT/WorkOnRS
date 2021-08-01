@@ -33,8 +33,8 @@ Landsat8于**2013年2月11日**发射升空，携带有两个主要载荷：**OL
 
 ### 命名规则
 
-`LXSS_LLLL_PPPRRR_YYYYMMDD_yyyymmdd_CC_TX`  
-`LC08_L2SP_127031_20150818_20200908_02_T1.tar.gz`  
+规则 `LXSS_LLLL_PPPRRR_YYYYMMDD_yyyymmdd_CC_TX`  
+举例 `LC08_L2SP_127031_20150818_20200908_02_T1.tar.gz`  
 
 |名称标识|描述|
 |:---:|:---|
@@ -53,7 +53,30 @@ Landsat8于**2013年2月11日**发射升空，携带有两个主要载荷：**OL
 |CC|影像产品集合标识(Collection number) 如 C2,C1
 |TX|影像产品集合质量分类 ，"T1" 代表Tier 1(质量最优)，"T2" 代表Tier 2
 
+### 产品概述
 
+Landsat 8 tar.gz文件中包含若干类型影像文件，均为tif格式
+
+- **SR Image Files**  
+eg. LC08_L2SP_222005_20140922_20140923_02_T1_SR_B[1-7]{1}.TIF，此类型文件代表1-7波段的Surface Reflectance。
+- **ST Image Files**  
+eg. LC08_L2SP_222005_20140922_20140923_02_T1_ST_B10.TIF,此文件代表地温产品（Surface Temperature)
+- QA Band  
+eg. LC08_L2SP_222005_20140922_20140923_02_T1_QA_PIXEL.TIF，此文件为质量控制文件，包含信息丰富，一个重要用途就是用来去除影像中的云。影像数据类型为unsined int16，因此，
+每个比特位都包含了特定的信息，如第3位，0代表对应像素点大概率不为云，反之，1则大概率为云。
+举例，在某区域的Landsat 8真彩色图像中某一像素为云，同一位置的QA影像像素值为`55052`，转换为二进制数据为`1101011100001100`, 注意从右往左解读，第0位为0，代表是影像数据，第二位为0，原文为`0 for cloud is not dilated or no cloud,1 for cloud dilation`，不是很明白，但不是本次讨论重点，跳过，第三位为1，原文翻译为0代表没有设置卷云置信等级或者是卷云的概率比较低，1则代表是卷云的概率比较高，第四位为1，原文翻译为0代表为云概率低，1则反之，为云的概率较高。剩余比特位代表的信息可直接查询[Data Format Control Book](https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/LSDS-1328_Landsat8-9-OLI-TIRS-C2-L2-DFCB-v6.pdf)第8页。因此我们，可以通过判断第3位比特01状态来判断影像对应像素是否为云。
+
+- **Radiometric Saturation and Terrain Occlusion QA Band & SR Aerosol QA & ST QA**  
+参照QA band
+
+- **Metadata**
+landsat 系列卫星特有mtl.txt文件，eg. LC08_L2SP_222005_20140922_20140923_02_T1_MTL.[txt,xml] 文件中包含了产品的元数据，非常详细。
+
+- **Angle Coefficient File**
+角度信息
+
+- **ST Intermediate Band Files**  
+单窗算法计算地温的中间文件，eg. LC08_L2SP_222005_20140922_20140923_02_T1_ST_[TRAD,URAD,DRAD,ATRAN,EMIS,EMSD,CDIST].TIF
 
 更多详细信息参见  [Landsat 8-9 OLI-TIRS Collection 2 Level 2 Data Format Control Book](https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/atoms/files/LSDS-1328_Landsat8-9-OLI-TIRS-C2-L2-DFCB-v6.pdf)
 
