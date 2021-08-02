@@ -1,6 +1,15 @@
 # Landsat Series
 ---
 
+## **Related Knowledge**  
+
+### 1. About **Collection**
+2016年，美国USGS将Landsat数据资料重新组织为一个分层（Tier）管理结构，并命名为Collection，这个结构确保所有landsat level1级产品提供已知数据质量的一致存档，同时控制存档的持续改进，并在获取所有数据时访问这些数据，将数据重新组织为Collection 1是landsat 数据档案的一个重要变化，它确保了所有仪器在时间和质量上的一致性，**Collection 1 包含了1972年至今landsat1-8获取的所有一级数据。**  
+Landsat Collection 2标志着USGS对landsat level1级别数据档案第二次重大的再处理事件，Collection2利用了近些年来数据处理、算法开发以及数据访问和分发能力方面的最新进展，对几项数据产品进行了显著的改进，Collection 2的一个主要特点是Landsat level 1级数据处理流程中使用的全球地面参考数据集的绝对地理定位精度有了实质性的提高。此外，**Collection 2包括1982年至今更新的DEM建模源、校准和验证更新以及基于全球2级表面反射率和表面温度场景的产品**。  
+
+请注意：基于Landsat Collection 1 的正向处理将持续到**2021年12月31日**，届时，基于Landsat Collection 2的正向处理同时生效。从2022年1月1日起，所有新的landsat数据将仅处理到Landsat Collection 2库存结构中。
+鼓励用户在方便的时候尽早将其工作流程迁移到Landsat Collection 2。由于数据处理和算法开发方面的进步，不鼓励用户在同一工作流中交替使用Collection 1和Collection 2。  
+Landsat Collection 1停用后，数据仍支持搜索和下载。
 
 ## Landsat 8
 
