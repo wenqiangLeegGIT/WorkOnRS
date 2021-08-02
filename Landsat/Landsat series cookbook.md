@@ -11,6 +11,16 @@ Landsat Collection 2标志着USGS对landsat level1级别数据档案第二次重
 鼓励用户在方便的时候尽早将其工作流程迁移到Landsat Collection 2。由于数据处理和算法开发方面的进步，不鼓励用户在同一工作流中交替使用Collection 1和Collection 2。  
 Landsat Collection 1停用后，数据仍支持搜索和下载。
 
+### 2. About **Tier**  
+
+按照质量等级排名  
+**Tier 1**–OLI/TIRS、ETM+、TM和MSS数据处理至1级精度以及具有图像到图像配准的地形校正产品（L1TP）GLS控制≤12米径向均方根误差（RMSE）。  
+**Tier 2**–OLI/TIRS和ETM+数据处理至第1级系统化地形校正产品（L1GT）、TM和MSS数据处理至1级系统校正（L1GS）产品，1级精度和地形校正产品（L1TP），与GLS进行图像对图像注册控制>12米RMSE。
+
+L1TP = terrain precision correction  
+L1GT = systematic terrain correction  
+L1GS = geometric systematic correction
+
 ## Landsat 8
 
 Landsat8于**2013年2月11日**发射升空，携带有两个主要载荷：**OLI和TIRS**。其中**OLI（全称：Operational Land Imager ，陆地成像仪）** 由卡罗拉多州的鲍尔航天技术公司研制；
