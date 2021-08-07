@@ -1,10 +1,10 @@
 # Landsat Series
 ---
 
-## **Related Knowledge**  
+# **Related Knowledge**  
 
 
-### 1. About **命名规则**  
+## 1. About **命名规则**  
 
 规则 `LXSS_LLLL_PPPRRR_YYYYMMDD_yyyymmdd_CC_TX`  
 举例 `LC08_L2SP_127031_20150818_20200908_02_T1.tar.gz`  
@@ -27,7 +27,7 @@
 |TX|影像产品集合质量分类 ，"T1" 代表Tier 1(质量最优)，"T2" 代表Tier 2，"RT" 代表Real Time
 
 
-### 2. About **Collection**
+## 2. About **Collection**
 2016年，美国USGS将Landsat数据资料重新组织为一个分层（Tier）管理结构，并命名为Collection，这个结构确保所有landsat level1级产品提供已知数据质量的一致存档，同时控制存档的持续改进，并在获取所有数据时访问这些数据，将数据重新组织为Collection 1是landsat 数据档案的一个重要变化，它确保了所有仪器在时间和质量上的一致性，**Collection 1 包含了1972年至今landsat1-8获取的所有一级数据。**  
 Landsat Collection 2标志着USGS对landsat level1级别数据档案第二次重大的再处理事件，Collection2利用了近些年来数据处理、算法开发以及数据访问和分发能力方面的最新进展，对几项数据产品进行了显著的改进，Collection 2的一个主要特点是Landsat level 1级数据处理流程中使用的全球地面参考数据集的绝对地理定位精度有了实质性的提高。此外，**Collection 2包括1982年至今更新的DEM建模源、校准和验证更新以及基于全球2级表面反射率和表面温度场景的产品**。  
 
@@ -35,19 +35,21 @@ Landsat Collection 2标志着USGS对landsat level1级别数据档案第二次重
 鼓励用户在方便的时候尽早将其工作流程迁移到Landsat Collection 2。由于数据处理和算法开发方面的进步，不鼓励用户在同一工作流中交替使用Collection 1和Collection 2。  
 Landsat Collection 1停用后，数据仍支持搜索和下载。
 
-### 3. About **Tier**  
+## 3. About **Tier**  
 
 按照质量等级排名  
 **Tier 1**–OLI/TIRS、ETM+、TM和MSS数据处理至1级精度以及具有图像到图像配准的地形校正产品（L1TP）GLS控制≤12米径向均方根误差（RMSE）。  
 **Tier 2**–OLI/TIRS和ETM+数据处理至第1级系统化地形校正产品（L1GT）、TM和MSS数据处理至1级系统校正（L1GS）产品，1级精度和地形校正产品（L1TP），与GLS进行图像对图像注册控制>12米RMSE。  
 
-### 4. About **Level**
+## 4. About **Level**
 
-- #### **Level 1**
+- ### **Level 1**  
+---
+#### **Landsat 8**
 Landsat 8 DFCB 中指出，一景完整的landsat 8 L1级产品包含13个文件，其中11个为波段文件，1个元数据文件和1个质量评估文件（BQA）。L1级别产品的命名规`LXSS_LLLL_PPPRRR_YYYYMMDD_yyyymmdd_CC_TX`，其中`LLLL`代表处理等级，通常为以下几种：  
-L1TP = Terrain Precision correction，辐射、几何和精度校正，并使用DEM校正因局部地形起伏引起的视差误差；地形校正产品的精度取决于地面控制点（GCP）的可用性以及最佳可用DEM的分辨率。
-L1GT = Systematic Terrain correction，地形校正产品，包括辐射和几何校正，并使用数字高程模型（DEM）校正因局部地形起伏引起的视差误差；地形校正产品的精度取决于最佳可用DEM的分辨率。
-L1GS = geometric systematic correction 
+L1TP = Terrain Precision correction，辐射、几何和精度校正，并使用DEM校正因局部地形起伏引起的视差误差；地形校正产品的精度取决于地面控制点（GCP）的可用性以及最佳可用DEM的分辨率。  
+L1GT = Systematic Terrain correction，地形校正产品，包括辐射和几何校正，并使用数字高程模型（DEM）校正因局部地形起伏引起的视差误差；地形校正产品的精度取决于最佳可用DEM的分辨率。  
+L1GS = geometric systematic correction   
 如：LC08_L1GT_029030_20151209_20160131_01_T1
 
 Band Number|Band Description|Band Center(nm)|
@@ -64,9 +66,27 @@ Band Number|Band Description|Band Center(nm)|
 10|Thermal Infrared Sensor (TIRS) 1|10800
 11|TIRS 2|12000
 
-更多信息参见[LANDSAT 8 (L8) LEVEL 1 (L1) DATA FORMAT CONTROL BOOK (DFCB)](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/Landsat/LSDS-809-Landsat8-Level1DFCB-v11.pdf)
+更多信息参见[LANDSAT 8 (L8) LEVEL 1 (L1) DATA FORMAT CONTROL BOOK (DFCB)](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/Landsat/LSDS-809-Landsat8-Level1DFCB-v11.pdf)  
 
-- #### **Level 2**
+---
+#### **Landsat 7**
+
+一个完整的landsat 7 level 1 产品包含21个文件，其中9个波段文件，1个元数据文件（MTL.txt），1个GCP文件（GCP.txt），一个README文件包含一个对1级产品内容简要的介绍，9个gap mask文件，并以单独的文件夹存储，分别对应9个波段文件。  
+关于`Gap Mask`。2003年5月31日，用于补偿卫星前向运动的扫描线校正器（SLC）失败，并且是永久性的。在没有SLC的情况下，传感器的视线沿着卫星地面轨迹呈之字形。这导致在此日期之后的Landsat 7影像除了中间部分是正常的，影像边缘大部分出现了线状条带的数据缺失情况。gap mask文件为二值文件，0代表缺失，1代表影像数据，每个波段文件都会对应一个gap mask文件。
+Band Number|Band Description|resolution(m)|
+|:---:|:---:|:---:|
+1|Blue (OLI)|30
+2|Green (OLI)|30
+3|Red (OLI)|30
+4|Near-Infrared (NIR) (OLI)|30
+5|Short Wavelength Infrared (SWIR)|30
+6|Thermal|60m
+6|Thermal|60m
+7|Mid-Infrared|30m
+8|Panchromatic (OLI)|10800
+
+
+- ### **Level 2**
 ## Landsat 8
 
 Landsat8于**2013年2月11日**发射升空，携带有两个主要载荷：**OLI和TIRS**。其中**OLI（全称：Operational Land Imager ，陆地成像仪）** 由卡罗拉多州的鲍尔航天技术公司研制；
