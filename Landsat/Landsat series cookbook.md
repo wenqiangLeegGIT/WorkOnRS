@@ -81,16 +81,36 @@ Band Number|Band Description|Band Center(nm)|
 更多信息参见[LANDSAT 7 (L7) LEVEL 1 (L1) DATA FORMAT CONTROL BOOK (DFCB)](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/Landsat/LSDS-272-Landsat7-Level1DFCB-v19.pdf)
 Band Number|Band Description|resolution(m)|
 |:---:|:---:|:---:|
-1|Blue (OLI)|30
-2|Green (OLI)|30
-3|Red (OLI)|30
+1|Blue |30
+2|Green |30
+3|Red |30
 4|Near-Infrared (NIR) (OLI)|30
 5|Short Wavelength Infrared (SWIR)|30
-6|Thermal(low gain)|60m
-6|Thermal(high gain)|60m
+6|Thermal(low gain)|60
+6|Thermal(high gain)|60
 7|Mid-Infrared|30m
-8|Panchromatic (OLI)|10800
+8|Panchromatic |10800
 
+
+#### **Landsat1-5**
+landsat 1-5均携带MSS传感器，因此，MSS获取的影像从1972年直至1992年。landsat1,2,3重访周期18天，4,5重访周期16天，并携带了TM传感器。TM传感器波段定义如下    
+Band Number|Band Description|wavelength(um)|resolution(m)|
+|:---:|:---:|:---:|:---:|
+1|Blue |0.45 - 0.52 |30
+2|Green |0.52 - 0.60 |30
+3|Red |0.63 - 0.69|30
+4|Near-Infrared (NIR)|0.76 - 0.90 |30
+5|Near-Infrared (NIR)|1.55 - 1.75 |30
+6|Thermal|10.40 - 12.50|120
+7|Mid-Infrared|2.08 - 2.35 |30
+
+landsat 1-5携带的MSS传感器如下  
+Band Number|Band Description|wavelength(um)|resolution(m)|
+|:---:|:---:|:---:|:---:|
+4|Green|0.5-0.6 |60
+5|Red|0.6-0.7 |60
+6|Near-Infrared (NIR)|0.7-0.8|60
+7|Near-Infrared (NIR)|0.8-1.1|60
 
 - ### **Level 2**
 ##### **Landsat 8**
@@ -122,7 +142,10 @@ landsat 系列卫星特有mtl.txt文件，eg. LC08_L2SP_222005_20140922_20140923
 
 
 ##### **Landsat 4-7**
-landsat 4-7的L2级产品大致上与ladnsat8一样，同样包含_SR_B[1-5]波段，代表经校正的地面反射率，_ST_B6地面温度和地面温度中间数据，以及相应QA质量控制数据。
+landsat 4-7的L2级产品大致上与ladnsat8一样，同样包含_SR_B[1-5]波段，代表**经过大气校正**的地面反射率（首先生成表观反射率和亮度温度然后结合辅助数据如水汽饱和度，DEM等采用6S模型得到地面反射率数据），_ST_B6地面温度和地面温度中间数据，以及相应QA质量控制数据。更多信息参见[Landsat 4-7
+Collection 2 (C2) Level 2 Science Product (L2SP) Guide](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/Landsat/LSDS-1618_Landsat-4-7_C2-L2-ScienceProductGuide-v3.pdf)
+
+
 
 ### 数据来源
 - USGS EarthExplorer https://earthexplorer.usgs.gov/
