@@ -43,7 +43,10 @@ Bands 8–36 – 1000 meter
 |Level 4|模型输出或low-level数据分析的结果（例如，从多个测量中得出的变量）。|
 
 
-
+### 数据来源
+- USGS EarthExplorer https://earthexplorer.usgs.gov/
+- Google Earth Engine https://earthengine.google.com/
+- U.S. GOVERNMENT COMPUTER https://e4ftl01.cr.usgs.gov/ ,此方法相当于直连MODIS数据服务器，在明确知道需要数据的条带号等信息条件下下载非常方便，但需要EARTH DATA 账号。此外还包含GEDI/VIIRS等数据。
 
 
 
