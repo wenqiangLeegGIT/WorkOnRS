@@ -48,7 +48,8 @@ Bands 8–36 – 1000 meter
 - Google Earth Engine https://earthengine.google.com/
 - U.S. GOVERNMENT COMPUTER https://e4ftl01.cr.usgs.gov/ ,此方法相当于直连MODIS数据服务器，在明确知道需要数据的条带号等信息条件下下载非常方便，但需要EARTH DATA 账号。此外还包含GEDI/VIIRS等数据。
 
-
+问题：一直在找关于MODIS数据综合的一个User guide，但是没有找到，MODIS产品众多，每种产品都有相关的technical report所以无法总结为一个文档。
+[这里](https://wenku.baidu.com/view/6fd329dcf524ccbff0218440.html#)是网上找到的一个对MODIS常用数据产品的说明。
 
 
 
