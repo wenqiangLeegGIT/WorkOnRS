@@ -22,12 +22,11 @@ eg. S2A_MSIL1C_20170105T013442_N0204_R031_T53NMJ_20170105T013443.SAFE
 |YYYYMMDDHHMMSS|数据获取事件|20170105T013442|
 |Nxxyy|PDGS处理基线编码|N0204|
 |ROOO|相对轨道编码(R001 - R143)|R031|
-|ROOO|相对轨道编码(R001 - R143)|R031|
 |Txxxxx|Tile编码|T53NMJ|
 |Product Discriminator|-|20170105T013443|
 |SAFE|产品格式 (Standard Archive Format for Europe)|-|
   
-## 3. 波段信息  
+## 3. **波段信息**  
 |Sensor|Band number|Band name|s2a central wavelength(nm)|s2a band width(nm)|s2b central wavelength(nm)|s2b band width(nm)|resolution(m)|
 |---|---|---|---|---|---|---|---|
 MSI|	1|	Coastal aerosol|	443.9|	20|	442.3|	20|	60|
@@ -44,7 +43,24 @@ MSI|	10|	SWIR – Cirrus|	1373.5|	30|	1376.9|	30|	60|
 MSI|	11|	SWIR|	1613.7|	90|	1610.4|	90|	20|
 MSI|	12|	SWIR|	2202.4|	180|	2185.7|	180|	20|
   
-## 3. 产品定义
+## 4. **产品定义**
+  
+  
+Level-0: 压缩的原始数据。0级产品包含生成1级(及以上)产品级别所需的所有信息。  
+
+Level-1A:级是未经压缩的原始数据，进行了粗略的校正和附加辅助数据。  
+
+Level-1B:辐射校正的辐射亮度数据。物理几何模型使用可用的地面控制点和附加到产品，但不应用。  
+  
+Note：以上等级数据不向用户分发。
+
+Level-1C:提供正射校正的TOA反射率，亚像素多光谱配准。云和陆地/水面具包括在产品中。  
+
+Level-2A:提供正射校正的BOA反射率，具有亚像素多光谱配准。一个场景分类地图(云，云阴影，植被，土壤/沙漠，水，雪等)包括在产品中。  
+
+
+  
+  
 L2A级图像数据产品使用与L1C级相同的tile系统、编码和归档结构。L2A产品以SAFE格式提供，包含以下文件：  
 - metadata file (XML file)
 - preview image (JPEG2000 with GML geo-location)
@@ -52,6 +68,7 @@ L2A级图像数据产品使用与L1C级相同的tile系统、编码和归档结�
 - datastrip files
 - auxiliary data
 - ancillary data (GIPPs, set of XML files).  
+![img](https://sentinel.esa.int/documents/247904/266422/Sentinel-2_Data_Formats_Figure_1.jpg)
   
 每个像素值被编码为12位。2a级场景分类产品格式化输出数据为:
 - 60米分辨率的场景分类图
@@ -63,3 +80,9 @@ L2A级图像数据产品使用与L1C级相同的tile系统、编码和归档结�
 - 表面反射率(BOA)。
 在L2A产品中，No Data值表示为0。
 [来源](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/product-formatting)
+  
+## 5. **条带系统**
+upload shpfile
+  
+## 6. **预处理程序**
+[Sen2Cor](http://step.esa.int/main/snap-supported-plugins/sen2cor)是一款用于以Sentinel-2 Level 1C输入生成Sentinel-2 Level 2A产品的程序。这款程序对L1C级TOA产品执行大气、地形和卷云校正，作为结果，生成BOA，并可选地生成地形和卷云校正图像产品，此外还包括气溶胶光学厚度、水蒸气、场景分类和云和雪的概率图像。其输出产品格式相当于1C级用户产品:JPEG 2000图像，三种不同的分辨率，60米，20米和10米。具体信息参考[Sen2Cor Configuration and User Manual]()。
