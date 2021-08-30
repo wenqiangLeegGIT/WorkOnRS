@@ -82,7 +82,7 @@ L2A级图像数据产品使用与L1C级相同的tile系统、编码和归档结�
 [来源](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/product-formatting)
   
 ## 5. **条带系统**
-upload shpfile
+shp格式，通过[网盘下载](https://pan.baidu.com/s/1tZAM7sWAdyDsW_P78POfIw) 提取码：dba1
   
 ## 6. **预处理程序**
 [Sen2Cor](http://step.esa.int/main/snap-supported-plugins/sen2cor)是一款用于以Sentinel-2 Level 1C输入生成Sentinel-2 Level 2A产品的程序。这款程序对L1C级TOA产品执行大气、地形和卷云校正，作为结果，生成BOA，并可选地生成地形和卷云校正图像产品，此外还包括气溶胶光学厚度、水蒸气、场景分类和云和雪的概率图像。其输出产品格式相当于1C级用户产品:JPEG 2000图像，三种不同的分辨率，60米，20米和10米。具体信息参考[Sen2Cor Configuration and User Manual]()。
