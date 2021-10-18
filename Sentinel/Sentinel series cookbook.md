@@ -77,7 +77,7 @@ L2A级图像数据产品使用与L1C级相同的tile系统、编码和归档结�
 2a级大气校正2a级场景分类产品格式化输出数据为:
 - 气溶胶光学厚度(AOT)地图
 - 水汽地图
-- 表面反射率(BOA)。
+- 表观反射率(BOA)。
 在L2A产品中，No Data值表示为0。
 [来源](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/product-formatting)
   
