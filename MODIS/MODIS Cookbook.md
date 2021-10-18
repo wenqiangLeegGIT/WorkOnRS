@@ -6,7 +6,7 @@
 MODIS(中分辨率成像光谱辐射计)指搭载在Terra和Aqua卫星上的载荷。Terra卫星于1999年12月18日发射，Aqua卫星于2002年5月4日发射。它的观测带宽度为2330公里，每**一到两天**观测一次地球的整个表面。
 它的探测器测量**36**个光谱波段，并以三种空间分辨率采集数据：250米、500米和1000米。  
 ## **命名规则**
-MODIS产品命名规则根据不同的产品表现形式分为三种，分别为：swath、tile、Climate Modeling Grid (CMG)。 注意，在每种产品命名开始都会有product short name，其中又会包含三种模式，MOD指搭载在Terra星上的MODIS载荷，MYD指搭载在Aqua星上的MODIS载荷，MYD则指产品是由MOD和MYD产品合成而来。 
+MODIS产品命名规则根据不同的产品表现形式分为三种，分别为：swath、tile、Climate Modeling Grid (CMG)。 注意，在每种产品命名开始都会有product short name，其中又会包含三种模式，MOD指搭载在Terra星上的MODIS载荷，MYD指搭载在Aqua星上的MODIS载荷，MCD则指产品是由MOD和MYD产品合成而来。 
 - swath  
 eg: MOD14.A2019159.2345.006.2019160032437.hdf  
 此例中，MOD14为产品短名，A（Acquisition） 指获得时间，此例中获得时间为2019159，159指2019年的第159天，2345指更加具体的获取时间，即2019年第159天的23:45，此后的2019160032437指产品生成时间。  
@@ -29,7 +29,7 @@ Bands 8–36 – 1000 meter
 - Sinusoidal Tile Grid（正弦栅格投影）  
 大部分标准的MODIS陆地产品使用的是正弦投影系统。在赤道出，tile大小为10°*10°，整个条带系统左上角坐标从(0,0)开始，方向为（水平，垂直），右下角为(h35,v17)。  
 - 条带文件  
-（填写条带文件地址）  
+[中国区域MODIS条带号](http://bbs.sciencenet.cn/home.php?mod=attachment&filename=modis%D0%D0%C1%D0%BA%C5.jpg&id=261592) 
 
 ## MODIS数据处理等级
 |等级|描述|
