@@ -30,6 +30,7 @@ Bands 8–36 – 1000 meter
 大部分标准的MODIS陆地产品使用的是正弦投影系统。在赤道出，tile大小为10°*10°，整个条带系统左上角坐标从(0,0)开始，方向为（水平，垂直），右下角为(h35,v17)。  
 - 条带文件  
 [中国区域MODIS条带号](http://bbs.sciencenet.cn/home.php?mod=attachment&filename=modis%D0%D0%C1%D0%BA%C5.jpg&id=261592) 
+[Shp文件](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/MODIS/modis_sinusoidal_grid_world.zip)
 
 ## MODIS数据处理等级
 |等级|描述|
