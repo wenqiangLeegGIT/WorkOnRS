@@ -14,12 +14,13 @@ SENTINEL-2于2015年6月23日发射,隶属于欧盟委员会哥白尼计划的�
 以USGS Earth Explorer搜索Sentinel 数据结果为例，其元数据中`Vendor Product ID`符合以下命名规则：  
 MMM_MSIXXX_YYYYMMDDHHMMSS_Nxxyy_ROOO_Txxxxx_<Product Discriminator>.SAFE  
 eg. S2A_MSIL1C_20170105T013442_N0204_R031_T53NMJ_20170105T013443.SAFE  
+需注意，命名规则中有YYYYMMDDHHMMSS和Product Discriminator两个时间，根据官网描述，推断是前者是数据的获取时间，UTC时区和用户可能不一样，那么经处理后，后者是数据使用者所在时区的时间。
 
 |Identifier|Descrpition|example|
 |---|---|---|
 |MMM|Sentinel 2卫星编号|S2A/S2B|
 |MSIXXX|产品等级|MSIL1C/MSIL2A|
-|YYYYMMDDHHMMSS|数据获取事件|20170105T013442|
+|YYYYMMDDHHMMSS|数据获取时间|20170105T013442|
 |Nxxyy|PDGS处理基线编码|N0204|
 |ROOO|相对轨道编码(R001 - R143)|R031|
 |Txxxxx|Tile编码|T53NMJ|
@@ -36,7 +37,7 @@ MSI|	4|	Red|	664.5|	30|	665|	30|	10|
 MSI|	5|	Vegetation Red Edge	|703.9|	15|	703.8|	15|	20|
 MSI|	6|	Vegetation Red Edge|	740.2|	15|	739.1|	15|	20|
 MSI|	7|	Vegetation Red Edge|	782.5|	20|	779.7|	20|	20|
-MSI|	8|	NIR|	835.1|	115	833|	115|	10|
+MSI|	8|	NIR|	835.1|	115	|833|	115|	10|
 MSI|	8b|	Narrow NIR|	864.8|	20|	864|	20|	20|
 MSI|	9|	Water vapour|	945.0|	20|	943.2|	20|	60|
 MSI|	10|	SWIR – Cirrus|	1373.5|	30|	1376.9|	30|	60|
