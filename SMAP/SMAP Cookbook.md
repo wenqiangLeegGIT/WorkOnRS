@@ -38,4 +38,8 @@ eg. SMAP_L4_SM_gph_20150331T013000_Vv6032_001.h5
     - h5: HDF5数据
     - qa: Quality Assurance file
     - xml: XML格式的元数据文件
+  
+  ## Other information
+  1. SMAP使用的是**EASE-Grid2.0 Global**投影坐标系，EPSG代码为`6933`，proj4定义为`+proj=cea +lon_0=0 +lat_ts=30 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs`
+  2. 空间分辨率9km，时间分辨率1d，时间覆盖从2015年3月31日至今。
  
