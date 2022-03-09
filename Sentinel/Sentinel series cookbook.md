@@ -81,7 +81,10 @@ L2A级图像数据产品使用与L1C级相同的tile系统、编码和归档结�
 - 表观反射率(BOA)。
 在L2A产品中，No Data值表示为0。
 [来源](https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-2-msi/level-2a/product-formatting)
-  
+
+L2A产品分类算法及分类结果代码  
+[来源](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm)
+
 ## 5. **条带系统**
 shp格式，通过[网盘下载](https://pan.baidu.com/s/1tZAM7sWAdyDsW_P78POfIw) 提取码：dba1
   
