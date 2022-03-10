@@ -20,8 +20,7 @@ Planet影像产品按处理等级分为3级
 |PlanetScope Ortho Tile Product|Planet 瓦片图像产品（3A）是在3B产品的基础上，经过条带拼接和标准正方形格网（25km×25km）裁剪及重采样后的图像产品|level 3A|
 
 ## Naming Convention
-<acquisition date>_<acquisition time>_<satellite_id>_<productLevel><bandProduct>.<extension>
- eg. 20200315_023845_95_105a_3B_AnalyticMS_SR.tif
+>\<acquisition date\>_\<acquisition time\>_\<satellite_id\>_\<productLevel\>\<bandProduct\>.\<extension\>   eg. 20200315_023845_95_105a_3B_AnalyticMS_SR.tif
  不是很严格的对应上，但是大概能够明白各项代表的意思
   
 ## Product Defination
