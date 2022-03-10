@@ -24,6 +24,7 @@ Planet影像产品按处理等级分为3级
  不是很严格的对应上，但是大概能够明白各项代表的意思
   
 ## Product Defination
+实际应用中多数情况下使用**3B**等级产品，即**PlanetScope Ortho Scene product**，3B产品信息如下：  
 |产品属性|描述|
 |---|---|
 |子产品及格式|1. 影像文件：Geotiff<br>2. 元数据文件：xml<br>3.缩略图文件：Geotiff<br>4.无效数据掩膜(Unusable Data Mask,UDM)：Geotiff<br>5.有效数据掩膜(Usable Data Mask,UDM2)：Geotiff|
@@ -35,3 +36,25 @@ Planet影像产品按处理等级分为3级
 |地理坐标系|WGS84|
 |投影坐标系|UTM|
 |重采样方法|Cubic Convlution，三次卷积|
+## UDM and UDM2
+（补充devloper api中关于udm和udm2的描述信息 https://developers.planet.com/docs/data/udm-2/）
+### UDM
+（补充UDM信息）
+### UDM2 (Usable Data Mask)
+udm2为多波段影像，提供了一幅影像中可用数据的信息。
+|波段|描述|
+|---|---|
+|Band1|clear mask,1代表此像素是清晰可用的，0则反之，并且可能为以下5种分类|
+|Band2|snow mask,雪掩膜|
+|Band3|shadow mask,阴影掩膜|
+|Band4|light haze mask,轻度雾霾掩膜|
+|Band5|heavy haze mask,重度雾霾掩膜|
+|Band6|cloud mask,云掩膜|
+|Band7|confidence map,置信度地图，值域0-100，单位percent，从小到大表示对于以上分类可信度|
+|Band6|unusable mask,udm|
+
+## Other Info
+以下信息从[Planet developer api](https://developers.planet.com/docs/apis/data)中提取，如有需要可以详细阅读。
+### About `item` and `assets`
+1. 在Planet产品定义中，`item`指的卫星拍摄的逻辑结构上原始颗粒度的数据，可以理解为最初的原始数据，可能经过不同层级的处理，如上面所述1B、3B、3A，assets则是指对item进行处理分析后的数据，偏向应用一些。item中有一个`item_type`属性来表示item所属的类型如`PSScene`/`PSScene3Band`/`PSScene4Band`等，需注意*3/4Band即将在2023年1月弃用，Planet官方推荐PSScene*。
+
