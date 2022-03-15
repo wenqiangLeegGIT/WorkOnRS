@@ -84,6 +84,15 @@ L2A级图像数据产品使用与L1C级相同的tile系统、编码和归档结�
 
 L2A产品分类算法及分类结果代码  
 [来源](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm)
+  
+### 点值转换（L2A）
+|图像类型|转换公式|单位|描述|
+|---|---|---|---|
+|地表反射率(Surface Reflectance)|SR=DN/1e4|无单位|反射率一般都在0到1之间，特殊误提或者云会造成反射率在1以上|
+重采样后的AOT(Resampled_AOT)|AOT=DN/1e3|无单位|	|
+水汽(Water Vapour)|WVP=DN/1e3|cm or g*m-2|	典型的水汽柱为(海平面到空间)<br> 热带地区wvp=3-5cm <br> 中纬度地区夏季 wvp=2-3cm <br>干燥的夏春秋季 wvp1-1.5cm <br>干燥的沙漠和冬季wvp=0.3-08cm|
+|DEM|DEM=DN-1e4|m|OpenJPEG只能存储无符号整型数据，因此高程整体上会加10.0m来避免负值，所以DEM需在原有基础上-10m|
+
 
 ## 5. **条带系统**
 shp格式，通过[网盘下载](https://pan.baidu.com/s/1tZAM7sWAdyDsW_P78POfIw) 提取码：dba1
