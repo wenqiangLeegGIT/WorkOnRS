@@ -38,19 +38,19 @@ Planet影像产品按处理等级分为3级
 |投影坐标系|UTM|
 |重采样方法|Cubic Convlution，三次卷积|
 ## UDM and UDM2
-（补充devloper api中关于udm和udm2的描述信息 https://developers.planet.com/docs/data/udm-2/）
+从2018年8月份开始，全球范围内PSS4波段影像可使用UDM2数据，特定农业区域可追溯至2018年1月。需注意，2018年8月之后，一小部分PSS4波段影像因图像矫正程序失败原因。无法使用UDM2数据。
 ### UDM (Unusable Data Mask)
 udm为**单波段影像**，位深8bit，提供相应影像中不可用数据的相关信息
 |Bit|描述|
 |---|---|
 |0|表示所有影像数据的所有波段中，此像素是否包含blackfill，换言之，是否是有效的数据，1表示blackfill，无数据|
-|Band2|snow mask,雪掩膜|
-|Band3|shadow mask,阴影掩膜|
-|Band4|light haze mask,轻度雾霾掩膜|
-|Band5|heavy haze mask,重度雾霾掩膜|
-|Band6|cloud mask,云掩膜|
-|Band7|confidence map,置信度地图，值域0-100，单位percent，从小到大表示对于以上分类可信度|
-|Band6|unusable mask,udm|
+|1|cloud mask,1表示云覆盖，值“1”表示云覆盖率。云检测是在图像的抽取版本（即浏览图像）上执行的，因此很小的云可能会被错过。云区是指在评估波段（红色、NIR或绿色）中像素值高于可配置阈值的区域。有可能会将雪、云阴影、雾霾识别为云。|
+|2|标识该区域在影像数据的波段1中是否包含丢失（下行链路期间丢失）或可疑（包含下行链路错误）数据。值“1”表示数据丢失/可疑。如果产品不包括此波段，所有值设置为“0”。|
+|3|同bit2解释，但此处波段为2|
+|4|同bit2解释，但此处波段为3|
+|5|同bit2解释，但此处波段为4|
+|6|同bit2解释，但此处波段为5|
+|7|目前设置为0|
 ### UDM2 (Usable Data Mask)
 udm2为**多波段影像(8 bands)**，提供了一幅影像中可用数据的信息。
 |波段|描述|
