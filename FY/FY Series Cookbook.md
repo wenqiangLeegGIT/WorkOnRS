@@ -15,12 +15,14 @@ eg. FY4A-_AGRI--_H_DISK_1050E_L1-_FDI-_C001_NOM_20141022100000_20141022101459_05
 注2：任务编号：整个卫星运行周期内任务的唯一标识。与任务相关的文件需增加任务编号；按时间处理且无任务号的数据不增加任务编号字段，例如数传遥测、工程遥测文件，闪电仪的动态网格等
 2. L1C、L2、L3数据文件名结构如下所示：  
 卫星名称_仪器名称_观测模式_数据区域类型_星下点经度_数据级别_数据名称_仪器通道名称_投影方式_观测起始日期时间_观测结束日期时间_空间分辨率_备用字段.数据格式
-3. 主要参数说明  
+3. 主要参数说明[来源](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/FY/%E9%A3%8E%E4%BA%91%E5%9B%9B%E5%8F%B7%E6%B0%94%E8%B1%A1%E5%8D%AB%E6%98%9F%E6%95%B0%E6%8D%AE%E5%AD%98%E6%A1%A3%E6%96%87%E4%BB%B6%E5%90%8D%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83_20170509.pdf)  
 
 |参数名称|示例|描述|
 |---|---|---|
 |观测类型|H/N|H：高灵敏度观测，N：常规观测|
 |数据观测区域|1. DISK <br>2. NHEM <br>3. SHEM <br>4. REGn(0-9) <br>5. REGC <br>6.REGA|1. 全圆盘数据 <br>2. 北半球<br>3. 南半球<br>4. REG0-REG9，指代固定范围，范围 TBD探测仪、成像仪、闪电仪可分别定义<br>5. Region China<br>6. Region Australia|
 |投影方式定义|1. AEA <br>2. ESD <br>3. GLL <br>4. HAM <br>5. NOM|1. Albers Equal Area 等面积投影 <br>2. EASE-Grid 等积割圆柱投影 <br>3. Geographic Longitude/Latitude等经纬度投影 <br>4. Hammer投影 <br>5. Normalized projection标称投影|
+
+
 
 
