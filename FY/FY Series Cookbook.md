@@ -24,5 +24,8 @@ eg. FY4A-_AGRI--_H_DISK_1050E_L1-_FDI-_C001_NOM_20141022100000_20141022101459_05
 |投影方式定义|1. AEA <br>2. ESD <br>3. GLL <br>4. HAM <br>5. NOM|1. Albers Equal Area 等面积投影 <br>2. EASE-Grid 等积割圆柱投影 <br>3. Geographic Longitude/Latitude等经纬度投影 <br>4. Hammer投影 <br>5. Normalized projection标称投影|
 
 
+## 主要载荷
+
+
 
 
