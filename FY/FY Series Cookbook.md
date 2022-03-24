@@ -21,4 +21,6 @@ eg. FY4A-_AGRI--_H_DISK_1050E_L1-_FDI-_C001_NOM_20141022100000_20141022101459_05
 |---|---|---|
 |观测类型|H/N|H：高灵敏度观测，N：常规观测|
 |数据观测区域|1. DISK <br>2. NHEM <br>3. SHEM <br>4. REGn(0-9) <br>5. REGC <br>6.REGA|1. 全圆盘数据 <br>2. 北半球<br>3. 南半球<br>4. REG0-REG9，指代固定范围，范围 TBD探测仪、成像仪、闪电仪可分别定义<br>5. Region China<br>6. Region Australia|
+|投影方式定义|1. AEA <br>2. ESD <br>3. GLL <br>4. HAM <br>5. NOM|1. Albers Equal Area 等面积投影 <br>2. EASE-Grid 等积割圆柱投影 <br>3. Geographic Longitude/Latitude等经纬度投影 <br>4. Hammer投影 <br>5. Normalized projection标称投影|
+
 
