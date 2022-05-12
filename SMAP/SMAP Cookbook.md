@@ -2,6 +2,7 @@
 ---
 # Introduction
 SMAP（Soil Moisture Active and Passive） 是美国的地球观测卫星之一，**2015年1月31日**发射升空。从名字就可以知道，SMAP主要为了观测土壤水分，并且有主动的传感器和被动的传感器。主动的传感器是L波段雷达，被动的传感器是L波段微波辐射计。计划中，雷达和辐射计各自生产3km和36km的土壤水分产品，并协同生产9km的土壤水分产品。可惜，L波段的雷达当年的7月份（2015年7月7日）就出现了故障，目前SMAP上只有L波段辐射计在孤独地观测着地球。不过，已经有人在研究将SMAP的L波段辐射计数据与欧空局Sentinel的C波段雷达数据结合反演土壤水分，时间分辨率降低了（3天→12天），但空间分辨率由9km提升到了1km[来源](https://www.jianshu.com/p/08aed03bab41)。  
+* 主站 [SMAP](https://smap.jpl.nasa.gov/)
 
 ---
 # Data Level  
