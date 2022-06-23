@@ -28,9 +28,12 @@ Bands 8–36 – 1000 meter
 ## 条带系统
 - Sinusoidal Tile Grid（正弦栅格投影）  
 大部分标准的MODIS陆地产品使用的是正弦投影系统。在赤道出，tile大小为10°*10°，整个条带系统左上角坐标从(0,0)开始，方向为（水平，垂直），右下角为(h35,v17)。  
-- 条带文件  
+- 条带文件
 [中国区域MODIS条带号](http://bbs.sciencenet.cn/home.php?mod=attachment&filename=modis%D0%D0%C1%D0%BA%C5.jpg&id=261592) 
-[Shp文件](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/MODIS/modis_sinusoidal_grid_world.zip)
+[Shp文件](https://github.com/wenqiangLeegGIT/WorkOnRS/blob/main/MODIS/modis_sinusoidal_grid_world.zip)    
+
+
+[来源](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/modis-overview/)
 
 ## MODIS数据处理等级
 |等级|描述|
@@ -42,6 +45,8 @@ Bands 8–36 – 1000 meter
 |Level 2G|在统一时空网格比例（正弦）上映射的二级数据.|
 |Level 3|映射在统一时空网格尺度上的变量，通常具有一定的完整性和一致性。|
 |Level 4|模型输出或low-level数据分析的结果（例如，从多个测量中得出的变量）。|
+
+尽管LPDAAC分发L2级以上数据，但是可以从[MODIS官网](https://modis.gsfc.nasa.gov)获取L0/L1级数据，如原始辐射率产品(raw radiance)MOD01或者校正辐射率数据(calibrated radiance)MOD02QKM/1KM
 
 
 ### 数据来源
